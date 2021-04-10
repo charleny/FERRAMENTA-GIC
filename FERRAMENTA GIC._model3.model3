@@ -1,0 +1,623 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option name="children" type="Map">
+    <Option name="native:deleteholes_2" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="native:deleteholes" type="QString"/>
+      <Option name="component_description" value="Excluir buracos" type="QString"/>
+      <Option name="component_pos_x" value="202" type="double"/>
+      <Option name="component_pos_y" value="289.6" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="native:deleteholes_2" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="native:fixgeometries_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="MIN_AREA" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="0" type="double"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="native:fixgeometries_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="native:fixgeometries" type="QString"/>
+      <Option name="component_description" value="Corrigir geometrias" type="QString"/>
+      <Option name="component_pos_x" value="191.4000000000001" type="double"/>
+      <Option name="component_pos_y" value="213.60000000000002" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="native:fixgeometries_1" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:linestopolygons_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:fieldcalculator_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:fieldcalculator" type="QString"/>
+      <Option name="component_description" value="Calculadora de campo" type="QString"/>
+      <Option name="component_pos_x" value="685.7120000000001" type="double"/>
+      <Option name="component_pos_y" value="782.1839999999997" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="qgis:refactorfields_2" type="QString"/>
+      </Option>
+      <Option name="id" value="qgis:fieldcalculator_1" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="LOTES PROCESSADOS" type="Map">
+          <Option name="child_id" value="qgis:fieldcalculator_1" type="QString"/>
+          <Option name="component_description" value="LOTES PROCESSADOS" type="QString"/>
+          <Option name="component_pos_x" value="885.7120000000001" type="double"/>
+          <Option name="component_pos_y" value="827.1839999999997" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" value="false" type="bool"/>
+          <Option name="name" value="LOTES PROCESSADOS" type="QString"/>
+          <Option name="output_name" value="OUTPUT" type="QString"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="FIELD_LENGTH" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="30" type="int"/>
+          </Option>
+        </Option>
+        <Option name="FIELD_NAME" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="Insc. Imobiliária" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="FIELD_PRECISION" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="3" type="int"/>
+          </Option>
+        </Option>
+        <Option name="FIELD_TYPE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="2" type="int"/>
+          </Option>
+        </Option>
+        <Option name="FORMULA" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="concat(&quot;Distrito&quot;,&quot;Setor&quot;,&quot;Quadra&quot;,&quot;Face&quot;,&quot;Lote&quot;,&quot;Unidade&quot;,&quot;Vila&quot;)" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:refactorfields_2" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="NEW_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="true" type="bool"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:joinattributesbylocation_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:joinattributesbylocation" type="QString"/>
+      <Option name="component_description" value="Unir atributos pela posição" type="QString"/>
+      <Option name="component_pos_x" value="392.0985637065638" type="double"/>
+      <Option name="component_pos_y" value="490.1971274131273" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="native:deleteholes_2" type="QString"/>
+      </Option>
+      <Option name="id" value="qgis:joinattributesbylocation_1" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="DISCARD_NONMATCHING" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="true" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="native:deleteholes_2" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="JOIN" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="numerodequadras" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="JOIN_FIELDS" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="camposdondequadrasaseremmantidosdeixeembrancoparamantertodososcampos" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="METHOD" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="PREDICATE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" type="List">
+              <Option value="0" type="int"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option name="PREFIX" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:joinattributesbylocation_2" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:joinattributesbylocation" type="QString"/>
+      <Option name="component_description" value="Unir atributos pela posição" type="QString"/>
+      <Option name="component_pos_x" value="736.8000000000003" type="double"/>
+      <Option name="component_pos_y" value="555.1999999999998" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="qgis:joinattributesbylocation_1" type="QString"/>
+        <Option value="qgis:linestopolygons_3" type="QString"/>
+      </Option>
+      <Option name="id" value="qgis:joinattributesbylocation_2" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="DISCARD_NONMATCHING" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="false" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:linestopolygons_3" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="JOIN" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:joinattributesbylocation_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="JOIN_FIELDS" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="METHOD" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="PREDICATE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" type="List">
+              <Option value="0" type="int"/>
+              <Option value="4" type="int"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option name="PREFIX" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:joinattributesbylocation_3" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:joinattributesbylocation" type="QString"/>
+      <Option name="component_description" value="Unir atributos pela posição" type="QString"/>
+      <Option name="component_pos_x" value="979.4117992277995" type="double"/>
+      <Option name="component_pos_y" value="378.18399999999974" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:joinattributesbylocation_3" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="DISCARD_NONMATCHING" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="true" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="lote" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="JOIN" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:refactorfields_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="JOIN_FIELDS" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="camposdoslotesaseremmantidosdeixeembrancoparamantertodososcampos" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="METHOD" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="PREDICATE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" type="List">
+              <Option value="0" type="int"/>
+              <Option value="4" type="int"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option name="PREFIX" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:linestopolygons_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:linestopolygons" type="QString"/>
+      <Option name="component_description" value="Linhas para polígonos" type="QString"/>
+      <Option name="component_pos_x" value="197.32000000000008" type="double"/>
+      <Option name="component_pos_y" value="121.56736679536672" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:linestopolygons_1" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="quadra" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:linestopolygons_3" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:linestopolygons" type="QString"/>
+      <Option name="component_description" value="Linhas para polígonos" type="QString"/>
+      <Option name="component_pos_x" value="993.0117992277994" type="double"/>
+      <Option name="component_pos_y" value="448.17600000000016" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="qgis:joinattributesbylocation_3" type="QString"/>
+      </Option>
+      <Option name="id" value="qgis:linestopolygons_3" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:joinattributesbylocation_3" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:refactorfields_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:refactorfields" type="QString"/>
+      <Option name="component_description" value="Editar campos" type="QString"/>
+      <Option name="component_pos_x" value="512.1145482625479" type="double"/>
+      <Option name="component_pos_y" value="340.2637220077221" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:refactorfields_1" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="FIELDS_MAPPING" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" type="List">
+              <Option type="Map">
+                <Option name="expression" value="left(&quot;id&quot;,1)" type="QString"/>
+                <Option name="length" value="5" type="int"/>
+                <Option name="name" value="Distrito" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+              <Option type="Map">
+                <Option name="expression" value="right(&quot;id&quot;,2)&#xd;&#xa;" type="QString"/>
+                <Option name="length" value="5" type="int"/>
+                <Option name="name" value="Setor" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+            </Option>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="subsetores" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:refactorfields_2" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:refactorfields" type="QString"/>
+      <Option name="component_description" value="Editar campos" type="QString"/>
+      <Option name="component_pos_x" value="700.1800000000003" type="double"/>
+      <Option name="component_pos_y" value="682.9279999999997" type="double"/>
+      <Option name="dependencies" type="StringList">
+        <Option value="qgis:joinattributesbylocation_2" type="QString"/>
+      </Option>
+      <Option name="id" value="qgis:refactorfields_2" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="FIELDS_MAPPING" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" type="List">
+              <Option type="Map">
+                <Option name="expression" value="&quot;id&quot;" type="QString"/>
+                <Option name="length" value="30" type="int"/>
+                <Option name="name" value="ID" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+              <Option type="Map">
+                <Option name="expression" value="&quot;Distrito&quot;" type="QString"/>
+                <Option name="length" value="5" type="int"/>
+                <Option name="name" value="Distrito" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+              <Option type="Map">
+                <Option name="expression" value="&quot;Setor&quot;" type="QString"/>
+                <Option name="length" value="5" type="int"/>
+                <Option name="name" value="Setor" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+              <Option type="Map">
+                <Option name="expression" value="&quot;text&quot;" type="QString"/>
+                <Option name="length" value="10" type="int"/>
+                <Option name="name" value="Quadra" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="10" type="int"/>
+              </Option>
+              <Option type="Map">
+                <Option name="expression" value="&quot;Face&quot;" type="QString"/>
+                <Option name="length" value="10" type="int"/>
+                <Option name="name" value="Face" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+              <Option type="Map">
+                <Option name="expression" value="&quot;Lote&quot;" type="QString"/>
+                <Option name="length" value="10" type="int"/>
+                <Option name="name" value="Lote" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+              <Option type="Map">
+                <Option name="expression" value="&quot;Unidade&quot;" type="QString"/>
+                <Option name="length" value="10" type="int"/>
+                <Option name="name" value="Unidade" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+              <Option type="Map">
+                <Option name="expression" value="&quot;Vila&quot;" type="QString"/>
+                <Option name="length" value="10" type="int"/>
+                <Option name="name" value="Vila" type="QString"/>
+                <Option name="precision" value="0" type="int"/>
+                <Option name="type" value="2" type="int"/>
+              </Option>
+            </Option>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:joinattributesbylocation_2" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help" type="Map">
+    <Option name="" value="" type="QString"/>
+    <Option name="ALG_CREATOR" value="Charlene Albuquerque de Souza" type="QString"/>
+    <Option name="ALG_DESC" value="Gerador de Inscrição Imobiliária para Imóveis Cadastrados, este algoritmo calcula o número de Inscrição Imobiliária para lotes cadastrados de cada setor de prefeitura" type="QString"/>
+    <Option name="ALG_HELP_CREATOR" value="" type="QString"/>
+    <Option name="ALG_VERSION" value="Versão 1.0" type="QString"/>
+    <Option name="HELP_URL" value="" type="QString"/>
+    <Option name="SHORT_DESCRIPTION" value="Gerador de Inscrição Imobiliária para Imóveis Cadastrados, este algoritmo calcula o número de Inscrição Imobiliária para lotes cadastrados de cada setor de prefeitura" type="QString"/>
+    <Option name="camposdondequadrasaseremmantidosdeixeembrancoparamantertodososcampos" value="Este campo deve conter o valor da quadra, e apenas um campo é selecionado, este campo está relacionado a Camada Número de Quadra. " type="QString"/>
+    <Option name="camposdoslotesaseremmantidosdeixeembrancoparamantertodososcampos" value="Este campo deve conter informações acerca do lote, como: Id, Face, Lote, Vila e Unidade." type="QString"/>
+    <Option name="lote" value="A camada deve ser de geometria linha. " type="QString"/>
+    <Option name="numerodequadras" value="Camada de geometria pontual, contendo o número da quadra. " type="QString"/>
+    <Option name="quadra" value="Camada de geometria linha, esta camada não deve ter nenhuma informação na tabela de atributos." type="QString"/>
+    <Option name="subsetores" value="Camada de geometria polígono, nesta camada será extraído as informações de distrito e setor para cada lote, e deve conter o ID como campo de informação do Subsetor. " type="QString"/>
+  </Option>
+  <Option name="modelVariables"/>
+  <Option name="model_group" value="Ferramentas" type="QString"/>
+  <Option name="model_name" value="GIC" type="QString"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="camposdondequadrasaseremmantidosdeixeembrancoparamantertodososcampos" type="Map">
+      <Option name="allow_multiple" value="false" type="bool"/>
+      <Option name="data_type" value="-1" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" value="Campo do numero de quadras a ser mantido" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="camposdondequadrasaseremmantidosdeixeembrancoparamantertodososcampos" type="QString"/>
+      <Option name="parameter_type" value="field" type="QString"/>
+      <Option name="parent_layer" value="numerodequadras" type="QString"/>
+    </Option>
+    <Option name="camposdoslotesaseremmantidosdeixeembrancoparamantertodososcampos" type="Map">
+      <Option name="allow_multiple" value="true" type="bool"/>
+      <Option name="data_type" value="-1" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" value="Campos dos Lotes a serem mantidos (deixe em branco para manter todos os campos)" type="QString"/>
+      <Option name="flags" value="8" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="camposdoslotesaseremmantidosdeixeembrancoparamantertodososcampos" type="QString"/>
+      <Option name="parameter_type" value="field" type="QString"/>
+      <Option name="parent_layer" value="lote" type="QString"/>
+    </Option>
+    <Option name="lote" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="1" type="int"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" value="Camada Lote" type="QString"/>
+      <Option name="flags" value="8" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="lote" type="QString"/>
+      <Option name="parameter_type" value="vector" type="QString"/>
+    </Option>
+    <Option name="numerodequadras" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="0" type="int"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" value="Camada Numero de Quadras" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="numerodequadras" type="QString"/>
+      <Option name="parameter_type" value="vector" type="QString"/>
+    </Option>
+    <Option name="qgis:fieldcalculator_1:LOTES PROCESSADOS" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="data_type" value="-1" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" value="LOTES PROCESSADOS" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="qgis:fieldcalculator_1:LOTES PROCESSADOS" type="QString"/>
+      <Option name="parameter_type" value="sink" type="QString"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+    </Option>
+    <Option name="quadra" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="1" type="int"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" value="Camada QuadraS" type="QString"/>
+      <Option name="flags" value="8" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="quadra" type="QString"/>
+      <Option name="parameter_type" value="vector" type="QString"/>
+    </Option>
+    <Option name="subsetores" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="2" type="int"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" value="Camada Setores" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="subsetores" type="QString"/>
+      <Option name="parameter_type" value="vector" type="QString"/>
+    </Option>
+  </Option>
+  <Option name="parameters" type="Map">
+    <Option name="camposdondequadrasaseremmantidosdeixeembrancoparamantertodososcampos" type="Map">
+      <Option name="component_description" value="camposdondequadrasaseremmantidosdeixeembrancoparamantertodososcampos" type="QString"/>
+      <Option name="component_pos_x" value="181.03999999999996" type="double"/>
+      <Option name="component_pos_y" value="428.35616988417" type="double"/>
+      <Option name="name" value="camposdondequadrasaseremmantidosdeixeembrancoparamantertodososcampos" type="QString"/>
+    </Option>
+    <Option name="camposdoslotesaseremmantidosdeixeembrancoparamantertodososcampos" type="Map">
+      <Option name="component_description" value="camposdoslotesaseremmantidosdeixeembrancoparamantertodososcampos" type="QString"/>
+      <Option name="component_pos_x" value="1099.4398764478758" type="double"/>
+      <Option name="component_pos_y" value="265.12188416988425" type="double"/>
+      <Option name="name" value="camposdoslotesaseremmantidosdeixeembrancoparamantertodososcampos" type="QString"/>
+    </Option>
+    <Option name="lote" type="Map">
+      <Option name="component_description" value="lote" type="QString"/>
+      <Option name="component_pos_x" value="859.3286023166022" type="double"/>
+      <Option name="component_pos_y" value="274.18750579150577" type="double"/>
+      <Option name="name" value="lote" type="QString"/>
+    </Option>
+    <Option name="numerodequadras" type="Map">
+      <Option name="component_description" value="numerodequadras" type="QString"/>
+      <Option name="component_pos_x" value="193.96095752895755" type="double"/>
+      <Option name="component_pos_y" value="561.208988416988" type="double"/>
+      <Option name="name" value="numerodequadras" type="QString"/>
+    </Option>
+    <Option name="quadra" type="Map">
+      <Option name="component_description" value="quadra" type="QString"/>
+      <Option name="component_pos_x" value="185.24" type="double"/>
+      <Option name="component_pos_y" value="52.040000000000006" type="double"/>
+      <Option name="name" value="quadra" type="QString"/>
+    </Option>
+    <Option name="subsetores" type="Map">
+      <Option name="component_description" value="subsetores" type="QString"/>
+      <Option name="component_pos_x" value="494.35837837837835" type="double"/>
+      <Option name="component_pos_y" value="201.8774980694981" type="double"/>
+      <Option name="name" value="subsetores" type="QString"/>
+    </Option>
+  </Option>
+</Option>
